@@ -43,9 +43,9 @@ export default function NotesList() {
     <>
       <h1 className="mb-3">Previous Notes</h1>
       {loading && <h2 className="pl-2">Loading...</h2>}
-      {!loading &&
-        notes.map((note) => (
-          <>
+      {!loading && (
+        <div className="cardList">
+          {notes.map((note) => (
             <Card
               key={note.id}
               onClick={() => handleShow(note)}
@@ -56,8 +56,9 @@ export default function NotesList() {
                 By {note.name} - {note.date}
               </Card.Subtitle>
             </Card>
-          </>
-        ))}
+          ))}
+        </div>
+      )}
       <Modal show={show} size="lg" onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>{modal.title}</Modal.Title>
