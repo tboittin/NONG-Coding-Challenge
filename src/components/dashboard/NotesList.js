@@ -9,7 +9,7 @@ export default function NotesList() {
 
   const getNotes = () => {
     setLoading(true);
-    ref.onSnapshot((snapshot) => {
+    ref.orderBy("date", "desc").onSnapshot((snapshot) => {
       const notes = [];
       snapshot.forEach((doc) => {
         notes.push(doc.data());
@@ -32,6 +32,9 @@ export default function NotesList() {
           {notes.map((note) => (
             <div key={note.id}>
               <h2>{note.title}</h2>
+              <h3>
+                By {note.name} - {note.date}
+              </h3>
               <p>{note.description}</p>
             </div>
           ))}

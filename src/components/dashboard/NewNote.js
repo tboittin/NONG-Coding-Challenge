@@ -7,6 +7,7 @@ export default function NewNote() {
   const [loading, setLoading] = useState(false);
 
   const [title, setTitle] = useState("");
+  const [name, setName] = useState("");
   const [date, setDate] = useState("");
   const [description, setDescription] = useState("");
 
@@ -20,6 +21,7 @@ export default function NewNote() {
       setLoading(true);
       ref.add({
         title: title,
+        name: name,
         date: date,
         description: description,
       });
@@ -35,6 +37,9 @@ export default function NewNote() {
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
   };
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
   const handleDateChange = (e) => {
     setDate(e.target.value);
   };
@@ -44,6 +49,7 @@ export default function NewNote() {
 
   const initializeState = () => {
     setDate("");
+    setName("");
     setTitle("");
     setDescription("");
   };
@@ -58,10 +64,18 @@ export default function NewNote() {
             <Form.Group id="title">
               <Form.Label>Title</Form.Label>
               <Form.Control
-                type="title"
                 name="title"
                 value={title}
                 onChange={handleTitleChange}
+                required
+              />
+            </Form.Group>
+            <Form.Group id="name">
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                name="name"
+                value={name}
+                onChange={handleNameChange}
                 required
               />
             </Form.Group>
