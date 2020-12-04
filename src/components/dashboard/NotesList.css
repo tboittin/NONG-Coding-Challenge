@@ -1,0 +1,4 @@
+.noteCard:hover {
+  cursor: pointer;
+  background-color: #bbb;
+}

@@ -1,9 +1,25 @@
 import React, { useEffect, useState } from "react";
+import { Card, Modal } from "react-bootstrap";
 import firebase from "../../firebase";
+
+import "./NotesList.css";
 
 export default function NotesList() {
   const [notes, setNotes] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [modal, setModal] = useState({});
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = (note) => {
+    setModal({
+      title: note.title,
+      name: note.name,
+      date: note.date,
+      description: note.description,
+    });
+    setShow(true);
+  };
 
   const ref = firebase.firestore().collection("notes");
 
@@ -25,21 +41,34 @@ export default function NotesList() {
 
   return (
     <>
-      {loading && <h1>Loading...</h1>}
-      {!loading && (
-        <div>
-          <h1>Previous Notes</h1>
-          {notes.map((note) => (
-            <div key={note.id}>
-              <h2>{note.title}</h2>
-              <h3>
+      <h1 className="mb-3">Previous Notes</h1>
+      {loading && <h2 className="pl-2">Loading...</h2>}
+      {!loading &&
+        notes.map((note) => (
+          <>
+            <Card
+              key={note.id}
+              onClick={() => handleShow(note)}
+              className="py-2 px-4 m-2 noteCard"
+            >
+              <Card.Title>{note.title}</Card.Title>
+              <Card.Subtitle className="mb-2 pl-2 text-muted">
                 By {note.name} - {note.date}
-              </h3>
-              <p>{note.description}</p>
-            </div>
-          ))}
-        </div>
-      )}
+              </Card.Subtitle>
+            </Card>
+          </>
+        ))}
+      <Modal show={show} size="lg" onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>{modal.title}</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h2>
+            By {modal.name} - {modal.date}
+          </h2>
+          <p>{modal.description}</p>
+        </Modal.Body>
+      </Modal>
     </>
   );
 }
