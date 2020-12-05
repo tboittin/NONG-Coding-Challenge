@@ -1,6 +1,6 @@
 Hi guys from NONG, thanks for giving me the opportunity to apply to this internship !
 
-TLDR: The app link is here: https://nong-coding-project.web.app/.
+**TLDR: The app link is here: https://nong-coding-project.web.app/.**
 
 First of all, I would like to say that I had limited time to build this app as I was in vacation and with limited access to my computer and/or internet, no prior experience with firebase and rush timing to make accomodations for my fligth on December 6th.
 
@@ -15,7 +15,7 @@ Have a good day !
 
 Thomas
 
-1- Boostraping authentification
+# 1- Boostraping authentification
 
 This app has been bootstraped using a existing project made by Kyle Cook a.k.a. Web Dev Simplified. It's a React App using Firebase for authentification. Its features are :
 
@@ -33,7 +33,7 @@ Youtube video: https://youtu.be/PKwu15ldZ7k
 Oh and here's his channel, this guys saved my life several times, I owe him this at least:
 Channel: https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw
 
-2- Adding required features on the Homepage
+# 2- Adding required features on the Homepage
 
 The Net Ninja - Firebase Firestore concepts using plain JS:
 Playlist: https://www.youtube.com/playlist?list=PL4cUxeGkcC9itfjle0ji1xOZ2cjRGY_WB
@@ -44,7 +44,7 @@ Set up video : https://www.youtube.com/watch?v=3ZEz-iposj8
 Query video : https://www.youtube.com/watch?v=T-GfSkC1JpE
 Channel: https://www.youtube.com/channel/UCrm-HTaESqxJXyxMcZFOHng
 
-3- Potential improvement
+# 3- Potential improvement
 
 - Using google map api to get user's gps position & displaying it on a map in notes.
 - Have a field to connect a note to particular projects or connecting it to concerned plant.
