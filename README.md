@@ -27,22 +27,24 @@ This app has been bootstraped using a existing project made by Kyle Cook a.k.a. 
 - Auth restrict access
 
 Here's his github repo as well as the video in which he builds the app:
-Github repo: https://github.com/WebDevSimplified/React-Firebase-Auth
-Youtube video: https://youtu.be/PKwu15ldZ7k
+
+- Github repo: https://github.com/WebDevSimplified/React-Firebase-Auth
+- Youtube video: https://youtu.be/PKwu15ldZ7k
 
 Oh and here's his channel, this guys saved my life several times, I owe him this at least:
-Channel: https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw
+
+- Channel: https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw
 
 # 2- Adding required features on the Homepage
 
-The Net Ninja - Firebase Firestore concepts using plain JS:
-Playlist: https://www.youtube.com/playlist?list=PL4cUxeGkcC9itfjle0ji1xOZ2cjRGY_WB
-Channel: https://www.youtube.com/c/TheNetNinja
+- The Net Ninja - Firebase Firestore concepts using plain JS:
+- Playlist: https://www.youtube.com/playlist?list=PL4cUxeGkcC9itfjle0ji1xOZ2cjRGY_WB
+- Channel: https://www.youtube.com/c/TheNetNinja
 
-Dev World - React & Firebase course
-Set up video : https://www.youtube.com/watch?v=3ZEz-iposj8
-Query video : https://www.youtube.com/watch?v=T-GfSkC1JpE
-Channel: https://www.youtube.com/channel/UCrm-HTaESqxJXyxMcZFOHng
+- Dev World - React & Firebase course
+- Set up video : https://www.youtube.com/watch?v=3ZEz-iposj8
+- Query video : https://www.youtube.com/watch?v=T-GfSkC1JpE
+- Channel: https://www.youtube.com/channel/UCrm-HTaESqxJXyxMcZFOHng
 
 # 3- Potential improvement
 
