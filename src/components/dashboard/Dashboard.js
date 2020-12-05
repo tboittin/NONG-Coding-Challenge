@@ -13,7 +13,11 @@ export default function Dashboard() {
           <Col xs={12} lg={{ span: 5, offset: 1 }} className="lg-mx-3">
             <NewNote />
           </Col>
-          <Col xs={12} lg={{ span: 5, offset: 1 }} className="lg-mx-3">
+          <Col
+            xs={12}
+            lg={{ span: 5, offset: 1 }}
+            className="lg-mx-3 xs-mt-5 lg-mt-auto"
+          >
             <NotesList />
           </Col>
         </Row>
