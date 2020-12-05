@@ -3,6 +3,8 @@ import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
 
+import "./Login.css";
+
 export default function Login() {
   const emailRef = useRef();
   const passwordRef = useRef();
@@ -27,7 +29,7 @@ export default function Login() {
   }
 
   return (
-    <div style={{ maxWidth: "400px", margin: "0 auto" }}>
+    <div className="login" style={{ maxWidth: "400px", margin: "0 auto" }}>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Log In</h2>
@@ -41,7 +43,11 @@ export default function Login() {
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" ref={passwordRef} required />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button
+              disabled={loading}
+              className="w-100 login-button"
+              type="submit"
+            >
               Log In
             </Button>
           </Form>

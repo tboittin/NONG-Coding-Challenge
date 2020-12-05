@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Form, Button, Card, Alert, Toast } from "react-bootstrap";
 import firebase from "../../firebase";
 
+import "./NewNote.css";
+
 export default function NewNote() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -102,7 +104,11 @@ export default function NewNote() {
                 required
               />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <Button
+              disabled={loading}
+              className="w-100 newNoteButton"
+              type="submit"
+            >
               Submit Note
             </Button>
           </Form>

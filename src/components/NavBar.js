@@ -24,14 +24,16 @@ export default function NavBar() {
 
   return (
     <>
-      <Navbar fixed="top" bg="light">
+      <Navbar fixed="top" bg="light" className="custom-navbar">
         <Container>
           <Row className="w-100">
             <Col xs={5}>
-              <Navbar.Brand href="#home">NONG Coding Challenge</Navbar.Brand>
+              <Navbar.Brand href="#home" className="custom-navbrand">
+                NONG Coding Challenge
+              </Navbar.Brand>
             </Col>
             <Col xs={{ span: 3, offset: 4 }} className="logout-col">
-              <Button variant="danger" onClick={handleLogout}>
+              <Button className="navBarButton" onClick={handleLogout}>
                 Log out
               </Button>
             </Col>

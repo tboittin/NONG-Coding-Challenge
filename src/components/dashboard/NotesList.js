@@ -40,9 +40,9 @@ export default function NotesList() {
   }, []);
 
   return (
-    <>
-      <h1 className="mb-3">Previous Notes</h1>
-      {loading && <h2 className="pl-2">Loading...</h2>}
+    <div className="noteList">
+      <h2 className="mb-3 text-center pt-3">Previous Notes</h2>
+      {loading && <h2>Loading...</h2>}
       {!loading && (
         <div className="cardList">
           {notes.map((note) => (
@@ -70,6 +70,6 @@ export default function NotesList() {
           <p>{modal.description}</p>
         </Modal.Body>
       </Modal>
-    </>
+    </div>
   );
 }
