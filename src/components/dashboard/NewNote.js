@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Form, Button, Card, Alert } from "react-bootstrap";
+import { Form, Button, Card, Alert, Toast } from "react-bootstrap";
 import firebase from "../../firebase";
 
 export default function NewNote() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [show, setShow] = useState(false);
 
   const [title, setTitle] = useState("");
   const [name, setName] = useState("");
@@ -26,7 +27,7 @@ export default function NewNote() {
         description: description,
       });
       initializeState();
-      // set a Toast to alert of submission
+      setShow(true);
     } catch {
       setError("Failed to log in");
     }
@@ -107,6 +108,21 @@ export default function NewNote() {
           </Form>
         </Card.Body>
       </Card>
+      <Toast
+        onClose={() => setShow(false)}
+        show={show}
+        delay={3000}
+        autohide
+        style={{
+          position: "absolute",
+          top: 0,
+          right: 0,
+        }}
+      >
+        <Toast.Header>
+          <strong className="mr-auto">Note successfully added!</strong>
+        </Toast.Header>
+      </Toast>
     </div>
   );
 }
