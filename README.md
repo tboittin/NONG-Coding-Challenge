@@ -50,6 +50,7 @@ Oh and here's his channel, this guys saved my life several times, I owe him this
 # 3- Potential improvement
 
 - Using google map api to get user's gps position & displaying it on a map in notes.
+- Having an image upload field so user can take pictures of the subject of the note.
 - Have a field to connect a note to particular projects or connecting it to concerned plant.
 - Adding a user Id to notes to replace the name input field.
 - Having 2 tabs to access the notes the user submitted and all the notes submitted by all the users.
